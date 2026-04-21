@@ -28,7 +28,7 @@ body {
 
 .site-bg {
   min-height: 100%;
-  background-image: url("background.jpg");
+  background-image: url("/background.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
