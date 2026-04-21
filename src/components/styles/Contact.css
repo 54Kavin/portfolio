@@ -1,0 +1,187 @@
+/* ── CONTACT INFO ── */
+.contact-info {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.contact-info p {
+  margin-bottom: 6px;
+}
+
+.contact-info strong {
+  color: #fff;
+}
+
+/* ── FORM WRAPPER ── */
+.input-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── INPUTS ── */
+.contact-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.contact-input:focus {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-color: #f6f5f0;
+}
+
+/* ── TEXTAREA ── */
+.contact-textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* ── SEND BUTTON ── */
+.btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 13px 40px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+  color: #171414;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-send:hover {
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  border: 2px solid white;
+}
+
+/* ── SUCCESS ALERT ── */
+.alert-success-custom {
+  background: rgba(139, 43, 226, 0.2);
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px #fff;
+  color: #f2f0f5;
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════ */
+
+/* ── LAPTOP (max 1200px) ── */
+@media (max-width: 1200px) {
+  .input-form {
+    max-width: 560px;
+  }
+}
+
+/* ── TABLET LANDSCAPE (max 1024px) ── */
+@media (max-width: 1024px) {
+  .input-form {
+    max-width: 520px;
+  }
+
+  .contact-input {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+}
+
+/* ── TABLET PORTRAIT (max 768px) ── */
+@media (max-width: 768px) {
+  .input-form {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+
+  .contact-input {
+    font-size: 0.88rem;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .btn-send {
+    width: auto;
+    padding: 12px 20px;
+  }
+}
+
+/* ── LARGE PHONE (max 576px) ── */
+@media (max-width: 576px) {
+  .input-form {
+    padding: 0;
+  }
+
+  .contact-input {
+    font-size: 0.85rem;
+    padding: 11px 13px;
+    margin-bottom: 12px;
+  }
+
+  .contact-textarea {
+    min-height: 110px;
+  }
+
+  .btn-send {
+    font-size: 0.9rem;
+    padding: 11px 20px;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── SMALL PHONE (max 400px) ── */
+@media (max-width: 400px) {
+  .contact-input {
+    font-size: 0.82rem;
+    padding: 10px 12px;
+  }
+
+  .btn-send {
+    font-size: 0.85rem;
+  }
+
+  .alert-success-custom {
+    font-size: 0.82rem;
+    padding: 10px 14px;
+  }
+}

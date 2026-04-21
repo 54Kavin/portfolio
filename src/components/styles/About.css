@@ -1,0 +1,178 @@
+/* ── ABOUT CONTENT LAYOUT ── */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+/* ── EDUCATION CARD ── */
+.edu-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+.edu-card h5 {
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.edu-card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ── ABOUT TEXT ── */
+.about-text {
+  flex: 2;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ── VIEW CV BUTTON ── */
+.btn-view-cv {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.btn-view-cv:hover {
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════ */
+
+/* ── LAPTOP (max 1200px) ── */
+@media (max-width: 1200px) {
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+}
+
+/* ── TABLET LANDSCAPE (max 1024px) ── */
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 24px;
+  }
+
+  .edu-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .edu-card p {
+    font-size: 0.95rem;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+}
+
+/* ── TABLET PORTRAIT (max 768px) ── */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .edu-card {
+    width: 100%;
+    flex: unset;
+  }
+
+  .about-text {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .btn-view-cv {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+}
+
+/* ── LARGE PHONE (max 576px) ── */
+@media (max-width: 576px) {
+  .about-content {
+    gap: 20px;
+  }
+
+  .edu-card {
+    padding: 16px;
+  }
+
+  .edu-card h5 {
+    font-size: 1rem;
+  }
+
+  .edu-card p {
+    font-size: 0.9rem;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .btn-view-cv {
+    padding: 9px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ── SMALL PHONE (max 400px) ── */
+@media (max-width: 400px) {
+  .edu-card p {
+    font-size: 0.85rem;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+}

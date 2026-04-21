@@ -1,0 +1,47 @@
+body {
+  background: #0a0a1a;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── SITE BACKGROUND ── */
+
+
+.site-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 5% 50%, rgba(224, 64, 251, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 95% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── SHARED SECTION CARD ── */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  width: 95%;
+  max-width: 1400px;
+  min-height: 40vh;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+}
+

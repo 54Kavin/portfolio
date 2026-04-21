@@ -1,0 +1,139 @@
+/* ── SKILLS GRID ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── SKILL CARD ── */
+.skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-color: #f6f5f0;
+}
+
+.skill-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  background: transparent;
+}
+
+.skill-card span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════ */
+
+/* ── LAPTOP (max 1200px) ── */
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* ── TABLET LANDSCAPE (max 1024px) ── */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-card span {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── TABLET PORTRAIT (max 768px) ── */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns on tablet */
+    gap: 16px;
+  }
+
+  .skill-card {
+    padding: 20px 12px;
+    border-radius: 16px;
+  }
+
+  .skill-card img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+  }
+
+  .skill-card span {
+    font-size: 0.9rem;
+  }
+}
+
+/* ── LARGE PHONE (max 576px) ── */
+@media (max-width: 576px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);  /* still 3 columns */
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 16px 8px;
+    border-radius: 14px;
+  }
+
+  .skill-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+  }
+
+  .skill-card span {
+    font-size: 0.8rem;
+  }
+}
+
+/* ── SMALL PHONE (max 400px) ── */
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns on very small phones */
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 14px 8px;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-card span {
+    font-size: 0.75rem;
+  }
+}

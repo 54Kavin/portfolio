@@ -1,0 +1,88 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a1a;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --purple-deep: #1a0a3d;
+  --purple-mid: #4a1080;
+  --purple-glow: #8b2be2;
+  --pink-accent: #e040fb;
+  --blue-accent: #00e5ff;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+}
+
+.site-bg {
+  min-height: 100%;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+.site-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 5% 50%, rgba(224, 64, 251, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 95% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.section-card {
+  padding: 6rem 2.5rem;     
+  min-height: unset;
+  height: auto;
+  max-width: 1400px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  overflow: hidden;          /* stops orb bleeding out */
+}
+
+/* ─── FIX: remove excess vertical space ─── */
+#home {
+  margin-top: 0;
+  margin-top: 20px;    
+  margin-bottom: 20px;
+}
+
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}

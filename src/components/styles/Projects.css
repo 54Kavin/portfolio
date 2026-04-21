@@ -1,0 +1,189 @@
+/* ── PROJECTS GRID ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── PROJECT CARD ── */
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-color: #f6f5f0;
+}
+
+/* ── PROJECT IMAGE ── */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── PROJECT BODY ── */
+.project-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-body h5 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--pink-accent);
+  margin-bottom: 8px;
+}
+
+.project-body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+}
+
+.project-body .desc {
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+/* ── TAGS ── */
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(139, 43, 226, 0.25);
+  border: 1px solid rgba(232, 228, 235, 0.4);
+  font-size: 0.82rem;
+  color: #c69fec;
+}
+.img{
+  padding: 15px;
+  border: 2px solid transparent;
+}
+
+.btn-project-view {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 22px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  /* align-self: center;  */
+  align-self: flex-start;
+  transition: 0.3s;
+}
+
+.btn-project-view:hover {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px #fff;
+  border-color: #fff;
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════ */
+
+/* ── LAPTOP (max 1200px) ── */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* ── TABLET LANDSCAPE (max 1024px) ── */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+}
+
+/* ── TABLET PORTRAIT (max 768px) ── */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  .project-body h5 {
+    font-size: 0.95rem;
+  }
+
+  .project-body p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ── LARGE PHONE (max 576px) ── */
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;   /* single column */
+    gap: 16px;
+  }
+
+  .project-card img {
+    height: 200px;                /* taller on single col */
+  }
+
+  .project-body {
+    padding: 14px;
+  }
+
+  .project-body h5 {
+    font-size: 1rem;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    padding: 4px 12px;
+  }
+}
+
+/* ── SMALL PHONE (max 400px) ── */
+@media (max-width: 400px) {
+  .project-card img {
+    height: 170px;
+  }
+
+  .project-body p {
+    font-size: 0.82rem;
+  }
+}
