@@ -21,7 +21,7 @@ function Projects({ sectionRef }) {
                     <span key={tag} className="tag">{tag}</span>
                   ))}
                 </div>
-                <a href={project.link} target="_blank" rel="noreferrer" className="btn-project-view">View Project →</a>
+                <a href={project.links} target="_blank" rel="noreferrer" className="btn-project-view">View Project →</a>
               </div>
             </div>
           ))}
