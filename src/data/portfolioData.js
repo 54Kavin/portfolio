@@ -55,7 +55,7 @@ export const PROJECTS = [
     image: "https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg?semt=ais_hybrid&w=740&q=80",
     languages: "HTML, CSS, Java Script",
     frameworks: "React",
-    links:"",
+    links:"https://ecommercewebsite54.netlify.app/",
     description: "E-commerce is the buying an item as goods, services, or data, and the transfer of funds, over the internet.",
     tags: ["HTML", "CSS","JavaScript","React"],
   },
