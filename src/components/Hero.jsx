@@ -1,4 +1,5 @@
 import myPdf   from "../assets/Kavin_CV(4).pdf"; 
+import profileImg from "../assets/prof_img.png";
 import { useEffect, useState } from "react";
 import "./styles/Hero.css";
 
@@ -100,7 +101,7 @@ function Hero({ sectionRef }) {
 
           {/* Right – Orb */}
           <div className="hero-orb-wrap">
-            <img src="" alt="profile" className="hero-orb-img" />
+            <img src={profileImg} alt="profile" className="hero-orb-img" />
           </div>
 
         </div>

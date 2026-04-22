@@ -27,6 +27,7 @@ function App() {
         if (!el) return false;
         const rect = el.getBoundingClientRect();
         return rect.top <= 120 && rect.bottom > 120;
+        
       });
 
       if (inView.length) setActiveSection(inView[inView.length - 1]);
